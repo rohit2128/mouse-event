@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+    <p id="demo"></p>
+
+    <button style ="width: 100px" id="mybtn">Try it</button>
+    <script>
+        var x =document.getElementById("mybtn");
+        x.addEventListener("click",e => {
+            document.getElementById("demo").innerHTML += "Clicked!<br>"
+            x.style.backgroundColor ="red"
+        })
+        x.addEventListener("mouseover",e => {
+            document.getElementById("demo").innerHTML += "Moused over!<br>";
+            x.style.backgroundColor ="lightgreen";
+        })
+        x.addEventListener("mouseout",e => {
+            document.getElementById("demo").innerHTML += "Moused out!<br>";
+            x.style.backgroundColor ="white";
+            
+            
+        })
+    </script>
+    
+</body>
+</html>
